@@ -1,76 +1,209 @@
-// var num = prompt("Enter a number:");
-// if (num > 0) document.write("Positive<br>");
-// else if (num < 0) document.write("Negative<br>");
-// else document.write("Zero<br>");
+var products = [
+    {
+      id: 101,
+      title: "Sony LED 40 inch",
+      variations: [
+        { id: 1, color: "black", price: 50000, quantity: 5 },
+        { id: 2, color: "red", price: 50000, quantity: 1 },
+        { id: 3, color: "silver", price: 55000, quantity: 8 },
+      ],
+      reviews: [
+        {
+          id: 1,
+          user: "Ahmad",
+          rating: 4.0,
+          title: "Good Product",
+          comments: "It is a very good product ....",
+          date: "06-02-2021",
+          status: true,
+        },
+        {
+          id: 2,
+          user: "Zubair",
+          rating: 4.5,
+          title: "Very Good Product",
+          comments: "zubair It is a very good product ....",
+          date: "05-02-2021",
+          status: false,
+        },
+        {
+          id: 3,
+          user: "Ali",
+          rating: 5.0,
+          title: "bad Product",
+          comments: "ali It is a very good product ....",
+          date: "04-02-2021",
+          status: true,
+        },
+      ],
+    },
+    {
+      id: 102,
+      title: "Mobile",
+      variations: [
+        { id: 1, color: "black", price: 50000, quantity: 5 },
+        { id: 2, color: "red", price: 50000, quantity: 1 },
+        { id: 3, color: "silver", price: 55000, quantity: 8 },
+      ],
+      reviews: [
+        {
+          id: 1,
+          user: "Ahmad",
+          rating: 4.0,
+          title: "Good Product",
+          comments: "It is a very good product ....",
+          date: "06-02-2021",
+          status: true,
+        },
+        {
+          id: 2,
+          user: "Zubair",
+          rating: 4.5,
+          title: "Very Good Product",
+          comments: "zubair It is a very good product ....",
+          date: "05-02-2021",
+          status: false,
+        },
+        {
+          id: 3,
+          user: "Ali",
+          rating: 5.0,
+          title: "bad Product",
+          comments: "ali It is a very good product ....",
+          date: "04-02-2021",
+          status: true,
+        },
+      ],
+    },
+    {
+      id: 103,
+      title: "Bike",
+      variations: [
+        { id: 1, color: "black", price: 55000, quantity: 5 },
+        { id: 2, color: "red", price: 50000, quantity: 1 },
+      ],
+      reviews: [
+        {
+          id: 1,
+          user: "Ahmad",
+          rating: 4.0,
+          title: "Good Product",
+          comments: "It is a very good product ....",
+          date: "06-02-2021",
+          status: true,
+        },
+        {
+          id: 2,
+          user: "Zubair",
+          rating: 3.0,
+          title: "Very Good Product",
+          comments: "zubair It is a very good product ....",
+          date: "05-02-2021",
+          status: false,
+        },
+      ],
+    },
+    
+  ];
 
-// --------------------------------------------
 
-// var num2 = prompt("Enter a number:");
+  //---------1
 
-// if (num2 % 2 === 0) document.write("Even<br>");
+//   var productId = 103;
 
-// else document.write("Odd<br>");
+//  for (var i = 0; i < products.length; i++) {
 
-// --------------------------------------------
+//   if (products[i].id === productId) {
 
-// var age = prompt("Enter your age:");
+//   console.log(products[i]);
 
-// if (age >= 18) document.write("Eligible to vote<br>");
+//   }
+// }
 
-// else document.write("Not eligible<br>");
 
-// --------------------------------------------
 
-// var a = prompt("Enter first number:");
+  //---------2
 
-// var b = prompt("Enter second number:");
+//   for (var i = 0; i < products.length; i++) {
 
-// if (a > b) document.write("Largest: " + a + "<br>");
+//   console.log(products[i].title);
 
-// else document.write("Largest: " + b + "<br>");
+//  }
 
-// --------------------------------------------
+  //---------3
 
-// var age = prompt("Enter your age:");
+//   var productId = 101;
 
-// var hasCard = confirm("Do you have a membership card? Click OK for Yes, Cancel for No.");
+//  for (var i = 0; i < products.length; i++) {
 
-// if (age >= 60 || hasCard) document.write("Eligible for discount<br>");
+//   if (products[i].id === productId) {
 
-// else document.write("Not eligible<br>");
+//     for (var j = 0; j < products[i].variations.length; j++) {
 
-// --------------------------------------------
+//       console.log(products[i].variations[j].color);
 
-// var username = prompt("Enter username:");
+//     }
+//   }
+// }
 
-// var password = prompt("Enter password:");
+  //---------4
 
-// if (username === "admin" && password === "12345") document.write("Login successful<br>");
+//   var productId = 101;
+//   var total = 0;
 
-// else document.write("Invalid credentials<br>");
+//  for (var i = 0; i < products.length; i++) {
 
-// --------------------------------------------
+//   if (products[i].id === productId) {
 
-// var marks = prompt("Enter your marks:");
+//     for (var j = 0; j < products[i].variations.length; j++) {
 
-// if (marks >= 90) document.write("Grade: A<br>");
+//       total += products[i].variations[j].quantity;
 
-// else if (marks >= 80) document.write("Grade: B<br>");
+//     }
+//   }
+// }
 
-// else if (marks >= 70) document.write("Grade: C<br>");
+// console.log("Total Quantity:" +  total);
 
-// else if (marks >= 60) document.write("Grade: D<br>");
 
-// else document.write("Grade: F<br>");
+  //---------5
 
-// --------------------------------------------
+//   for (var i = 0; i < products.length; i++) {
 
-// var color = prompt("Enter traffic light color (red, yellow, green):").toLowerCase();
+//     for (var j = 0; j < products[i].variations.length; j++) {
 
-// if (color === "red") document.write("Stop<br>");
+//       if (products[i].variations[j].quantity < 2) {
 
-// else if (color === "yellow") document.write("Slow down<br>");
+//         console.log(products[i].title);
+        
+//       }
+//     }
+//   }
 
-// else if (color === "green") document.write("Go<br>");
+  //---------6
 
-// else document.write("Invalid color<br>");
+// var maxAvg = 0;
+// var highRprod = null
+
+// for (var i=0; i< products.length; i++){
+//     var product= products[i];
+//     var sum=0;
+
+//     for (var j=0; j< product.reviews.length; j++){
+//         sum += product.reviews[j].rating;
+//     }
+
+//     var avg=sum/product.reviews.length;
+
+//     if(avg>maxAvg){
+//         maxAvg=avg;
+//         highRprod=product
+//     }
+
+//     console.log("Highest Rated Product is:"+" "+products.title[j])
+
+
+// }
+
+
+
